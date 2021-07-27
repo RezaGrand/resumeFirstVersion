@@ -1,15 +1,34 @@
+/*    ---  Content Tables           ---   */
+/*    ---  1.BodyStyles             ---   */
+/*    ---  2.BackGrounds            ---   */
+/*    ---  3.MainPart               ---   */
+/*    ---   3.1.Hero                ---   */
+/*    ---    3.1.1.WebDev           ---   */
+/*    ---     3.1.1.1.LeftArrows    ---   */
+/*    ---    3.1.2.HeroPic          ---   */
+/*    ---    3.1.3.MotionDes        ---   */
+/*    ---     3.1.3.1.RightArrows   ---   */
+/*    ---  4.MyName                 ---   */
+/*    ---    4.1.ImTitle            ---   */
+/*    ---    4.2.FullName           ---   */
+/*    ---  5.ShortBio               ---   */
+/*    ---  6.Nav                    ---   */
+/*    ---    6.1.RA2Logo            ---   */
+/*    ---    6.2.MenuButtons        ---   */
+/*    ---    6.3.LangSelector       ---   */
+
+/*    ---  1.BodyStyles         ---   */
 body {
     height: 100vh;
     width:100%;
-    /*min-height: 600px;*/
-    /*padding-top: 3vh;*/
     display: flex;
     flex-flow: column nowrap;
-    /*justify-content: center;*/
     align-items: center;
     background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
     /*background-color: blueviolet;*/
 }
+
+/*    ---  2.BackGrounds        ---   */
 .pageBackGround, .pageSubBackGround{
     position: absolute;
     width: 100%;
@@ -41,12 +60,15 @@ body {
     50%{background-position: 100% 50%;}
     100%{background-position: 0 50%;}
 }
+
+/*    ---  3.MainPart           ---   */
 main{
     width: 100%;
     height: 72%;
     /*background-color: #92fe9d;*/
 }
 
+/*    ---   3.1.Hero            ---   */
 main>.hero{
     width:100%;
     height: 100%;
@@ -56,14 +78,16 @@ main>.hero{
     /*background-color: blueviolet;*/
 }
 
+/*    ---    3.1.1.WebDev       ---   */
 .hero>.webDeveloper{
     position: relative;
     width: 50%;
     height: 45%;
     display: grid;
     order: 2;
-    background-color: yellow;
-    background-image: linear-gradient(-45deg, #00c9ff 0%, #92fe9d 80%);
+    /*background-color: yellow;*/
+    /*background-image: linear-gradient(-45deg, #00c9ff 0%, #92fe9d 80%);*/
+    background-image: linear-gradient(to left, #92fe9d 0%, transparent 60%);
 }
 
 .webDeveloperLink{
@@ -86,15 +110,12 @@ main>.hero{
     z-index: 1;
     transform:scale(.85,.85)  translateX(-30px) translateY(25px);
     background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
 }
 .webDeveloper:hover .shapeUnderWeb{
     transform:scale(.65,.65)  translateX(-80px) translateY(35px);
-    transition-property: all;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
 }
 
 .webDeveloper>.webContainer{
@@ -115,7 +136,7 @@ main>.hero{
     color: #434343;
     margin-top:5px;
     text-shadow: 3px 4px 0 #ffffff;
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
 }
@@ -126,17 +147,12 @@ main>.hero{
 }
 .webDeveloper:hover .webTitle{
     transform: translateX(20px);
-    transition-property: all;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
 }
 .webDeveloper:hover .developerTitle{
     transform: translatey(10px);
-    transition-property: all;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
 }
 
+/*    ---     3.1.1.1.LeftArrows    ---   */
 .leftArrowCont{
     width:calc(70px + 3vw) ;
     height: 30px;
@@ -146,7 +162,7 @@ main>.hero{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 400ms;
     transition-timing-function: ease-in-out;
     z-index: 40;
@@ -175,35 +191,29 @@ main>.hero{
 }
 .webDeveloper:hover .leftArrowCont{
     transform: translateX(-20px);
-    transition-property: all;
-    transition-duration: 400ms;
-    transition-timing-function: ease-in-out;
 }
 
+/*    ---    3.1.2.HeroPic      ---   */
 .heroPicCont{
     width: 100%;
     height: 50%;
     order: 1;
     display: grid;
     justify-items: center;
-    /*align-items: center;*/
     padding-top: 10px;
-    transition-property: all;
-    transition-duration: 400ms;
-    transition-timing-function: ease-in-out;
     /*background-color: #00c9ff;*/
 }
 .heroPicShadow{
     width:55%;
     max-width: 300px;
-    height: calc(170px + 15vh);
+    height: auto;
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: #ffffff;
     background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
     clip-path: polygon(80% 3%, 16% 10%, 7% 60%, 50% 92%, 97% 71%);
     transform: translateX(-20px) translateY(-8px);
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 400ms;
     transition-timing-function: ease-in-out;
     z-index: 1;
@@ -216,13 +226,14 @@ main>.hero{
     max-width: 300px;
     height: auto;
     clip-path: polygon(80% 3%, 16% 10%, 7% 60%, 50% 92%, 97% 71%);
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 400ms;
     transition-timing-function: ease-in-out;
     z-index: 3;
     /*background-color: #fa709a;*/
 }
 
+/*    ---    3.1.3.MotionDes    ---   */
 .motionDesignerLink{
     display: block;
     grid-column: 1/2;
@@ -241,9 +252,10 @@ main>.hero{
     position: relative;
     display: grid;
     justify-content: center;
-    background-color: steelblue;
-    /*background-image: linear-gradient(to left, #92fe9d 0%, #00c9ff 100%);*/
-    background-image: linear-gradient(to right, #00c9ff 0%, #fee140 80%);
+    /*background-color: steelblue;*/
+    /*background-image: linear-gradient(to right, #00c9ff 0%, #fee140 80%);*/
+    background-image: linear-gradient(to right, #92fe9d 0%, transparent 70%);
+
 }
 
 .motionContainer{
@@ -258,9 +270,6 @@ main>.hero{
 
 .motionDesigner:hover .motionTitle ,.motionDesigner:hover .designerTitle{
     transform:  rotateZ(-5deg) translateY(8px);
-    transition-property: all;
-    transition-duration: 200ms;
-    transition-timing-function: ease-in-out;
 }
 
 .shapeUnderMotion{
@@ -281,9 +290,6 @@ main>.hero{
     -webkit-clip-path: polygon(38% 40%, 52% 90%, 92% 46%);
     clip-path: polygon(38% 30%, 52% 90%, 87% 48%);
     transform:  rotateZ(-10deg);
-    transition-property: all;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
 }
 
 .motionTitle,.designerTitle{
@@ -295,7 +301,7 @@ main>.hero{
     margin-top:20px;
     text-shadow: 3px 4px 0 white;
     transform:  rotateZ(-5deg);
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
 }
@@ -306,6 +312,7 @@ main>.hero{
     transform:  rotateZ(5deg)
 }
 
+/*    ---     3.1.3.1.RightArrows   ---   */
 .rightArrowCont{
     width: calc(70px + 3vw);
     height: 30px;
@@ -316,7 +323,7 @@ main>.hero{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 400ms;
     transition-timing-function: ease-in-out;
     z-index: 40;
@@ -347,10 +354,9 @@ main>.hero{
 
 .motionDesigner:hover .rightArrowCont{
     transform: translateX(20px);
-    transition-property: all;
-    transition-duration: 400ms;
-    transition-timing-function: ease-in-out;
 }
+
+/*    ---  4.MyName             ---   */
 .myName{
     width: 100%;
     height: 10%;
@@ -359,6 +365,8 @@ main>.hero{
     z-index: 50;
     /*background-color: #82d1c4;*/
 }
+
+/*    ---    4.1.ImTitle        ---   */
 .imTitle{
     width: 17%;
     height: 100%;
@@ -371,18 +379,22 @@ main>.hero{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
     /*background-color: yellow;*/
 }
 
+/*    ---    4.2.FullName       ---   */
 .fullName{
     width: 83%;
     height: 100%;
     display: grid;
     justify-items: left;
     align-items: center;
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
     /*background-color: red;*/
 }
 .fullNameShadow{
@@ -396,16 +408,13 @@ main>.hero{
 
     -webkit-clip-path: polygon(0 0, 91% 14%, 94% 53%, 91% 94%, 2% 88%);
     clip-path: polygon(0 0, 91% 14%, 94% 53%, 91% 94%, 2% 88%);
-    transition-property: all;
+    transition-property: transform;
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
     z-index: 0;
 }
 .fullName:hover .fullNameShadow{
     transform: translateY(10px) rotateZ(-3deg);
-    transition-property: all;
-    transition-duration: 100ms;
-    transition-timing-function: ease-in-out;
 }
 
 .rezaAgha{
@@ -423,6 +432,7 @@ main>.hero{
     /*background-color: #00c9ff;*/
 }
 
+/*    ---  5.ShortBio           ---   */
 .shortBio{
     width: 100%;
     height: 10%;
@@ -436,9 +446,6 @@ main>.hero{
     color: #000000;
     /*border-radius: 10px;*/
     background-image: linear-gradient(to top, rgba(255,255,255,.7), rgba(255,255,255,0) 100%);
-    transition-property: all;
-    transition-duration: 200ms;
-    transition-timing-function: ease-in-out;
     /*background-color: #434343;*/
 
 }
@@ -457,6 +464,7 @@ main>.hero{
     color:#ee5f4d;
 }
 
+/*    ---  6.Nav                ---   */
 nav{
     width: 100%;
     height: 8%;
@@ -468,6 +476,8 @@ nav{
     background: linear-gradient(to right, #434343 40%, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     z-index: 100;
 }
+
+/*    ---    6.1.RA2Logo        ---   */
 nav>.RA2LogoWrapper{
     width:10%;
     height: 100%;
@@ -481,14 +491,12 @@ nav>.RA2LogoWrapper{
     z-index: 8;
     /*background-color: #ee5f4d;*/
 }
- .tooltip .tooltipText{
-     position: absolute;
-     bottom: 0;
-     opacity: 0;
-     z-index: -90;
-     /*background-color: #fa709a;*/
+
+.tooltip{
+    display: none;
 }
 
+/*    ---    6.2.MenuButtons    ---   */
 nav>.menuBtns{
     width:80%;
     height: 85%;
@@ -529,12 +537,10 @@ nav>.menuBtns{
 .navBtn:hover{
     background-color: #434343;
     color: #ffffff;
-    box-shadow: 0 -30px 0 #fee140;
-    border-bottom: 0;
-    transition-property: all;
-    transition-duration: 200ms;
+    border-bottom: 8px solid #fee140;
 }
 
+/*    ---    6.3.LangSelector    ---   */
 nav>.langSelector{
     display: flex;
     flex-flow: column nowrap;
@@ -550,7 +556,6 @@ nav>.langSelector{
 }
 .langSelector>a:hover{
     color: #ee5f4d;
-
 }
 .langSelector>a{
     color: #ffffff;
